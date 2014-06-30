@@ -17,12 +17,14 @@ public class WaitingFrame extends JFrame {
 		setUpFrame();
 		setUpComponents();
 		setVisible(true);
+		System.out.println("client opened a waiting frame");
 	}
 	
 	public WaitingFrame(Host host) {
 		setUpFrame();
 		setUpComponents();
 		setVisible(true);
+		System.out.println("host opened a waiting frame");
 	}
 	
 	private void setUpFrame() {

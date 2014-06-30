@@ -18,8 +18,14 @@ public class GameHost {
 	public static void newGame(Host host) {
 		thishost = host;
 		host.sendMsg(ChatCodes.NEW_GAME);
+		try {
+			host.hideWaitingFrame();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		Random r = new Random(); // create random number to decide who goes 1st.
-		if (r.nextInt(1) == 0) {// random value from 0 - 1. 0 equals host
+		int ranInt = r.nextInt(1);
+		if (ranInt == 0) {// random value from 0 - 1. 0 equals host
 			System.out.println("The host will guess first.");
 			host.showWaitingFrame();
 			host.sendMsg(ChatCodes.HOST_GUESS);
@@ -54,10 +60,12 @@ public class GameHost {
 		if (msg.equals(ChatCodes.ANSWER_FALSE)) { // && questionAns == false){
 			System.out.println("Received false answer!");
 			host.hideWaitingFrame();
+			newGame(host);
 		} else if (msg.equals(ChatCodes.ANSWER_TRUE)) { // && questionAns ==
 														// true){
 			System.out.println("Received true answer!");
 			host.hideWaitingFrame();
+			newGame(host);
 		} else if (msg.equals(ChatCodes.NEW_GAME)) {
 			System.out.println("Received new game!");
 		} else if (msg.contains(ChatCodes.QUESTION_ANSWER)) {
@@ -73,11 +81,11 @@ public class GameHost {
 			host.answer = answer;
 		}
 
-//		if (host.isWaitingFrameVisible()) {
-//			host.hideWaitingFrame();
-//		} else {
-//			host.showWaitingFrame();
-//		}
+		// if (host.isWaitingFrameVisible()) {
+		// host.hideWaitingFrame();
+		// } else {
+		// host.showWaitingFrame();
+		// }
 
 		// else if (msg.equals(ChatCodes.HOST_GUESS)) {
 		// GuessFrame guessFrame = new GuessFrame(host);
@@ -95,6 +103,7 @@ public class GameHost {
 		} else {
 			System.out.println("True is the wrong answer");
 		}
+		newGame(host);
 	}
 
 	@SuppressWarnings("unused")
@@ -108,6 +117,8 @@ public class GameHost {
 			CorrectDialog cd = new CorrectDialog(host, true);
 			System.out.println("Correct answer false");
 		}
+		newGame(host);
+
 	}
 
 	public static void submitQuestion(Host host, String question, boolean answer) {

@@ -71,6 +71,7 @@ public class Host implements Runnable {
 	
 	public void hideWaitingFrame(){
 		wf.dispose();
+		System.out.println("Client closed a waiting frame.");
 	}
 	
 	public boolean isWaitingFrameVisible(){

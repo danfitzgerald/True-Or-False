@@ -71,8 +71,8 @@ public class GuessFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				@SuppressWarnings("unused")
-				WaitingFrame wf = new WaitingFrame(host);
+//				@SuppressWarnings("unused")
+//				WaitingFrame wf = new WaitingFrame(host);
 				GameHost.answerTrue(host);
 				dispose();
 			}
@@ -81,8 +81,8 @@ public class GuessFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				@SuppressWarnings("unused")
-				WaitingFrame wf = new WaitingFrame(host);
+//				@SuppressWarnings("unused")
+//				WaitingFrame wf = new WaitingFrame(host);
 				GameHost.answerFalse(host);
 				dispose();
 			}
