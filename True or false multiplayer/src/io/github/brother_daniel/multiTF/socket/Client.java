@@ -1,5 +1,6 @@
 package io.github.brother_daniel.multiTF.socket;
 
+import io.github.brother_daniel.multiTF.GUI.WaitingFrame;
 import io.github.brother_daniel.multiTF.game.GameClient;
 
 import java.io.BufferedReader;
@@ -15,6 +16,7 @@ public class Client implements Runnable {
 	BufferedReader br;
 	PrintStream pr;
 	Thread thread = new Thread(this);
+	WaitingFrame wf;
 
 	public void startClient(String host, int port) {
 		try {
@@ -57,6 +59,22 @@ public class Client implements Runnable {
 				running = false;
 			}
 		}
+	}
+	
+	public void showWaitingFrame() {
+		wf = new WaitingFrame(this);
+	}
+	
+	public void hideWaitingFrame(){
+		wf.dispose();
+		System.out.println("Client closed a waiting frame.");
+	}
+	
+	public boolean isWaitingFrameVisible(){
+		if(wf != null)
+			return false;
+		else
+			return true;
 	}
 
 }

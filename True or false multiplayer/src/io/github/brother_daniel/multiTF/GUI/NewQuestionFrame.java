@@ -29,7 +29,7 @@ public class NewQuestionFrame extends JFrame {
 	JRadioButton radioTrue = new JRadioButton("True");
 	JRadioButton radioFalse = new JRadioButton("False");
 	JButton btnDone = new JButton("Done");
-	
+
 	private void setUpFrame() {
 		setTitle(Main.gameTitle);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -37,45 +37,50 @@ public class NewQuestionFrame extends JFrame {
 		setResizable(false);
 		setLocationRelativeTo(null);
 	}
-	
-	public NewQuestionFrame(final Client client){
+
+	public NewQuestionFrame(final Client client) {
+		try {
+			client.hideWaitingFrame();
+		} catch (Exception e) {
+			System.out.println("Unable to close waiting frame!");
+		}
 		setUpFrame();
 		setUpComponents();
 		btnDone.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				boolean answer;
-				if(radioTrue.isSelected()){
+				if (radioTrue.isSelected()) {
 					answer = true;
 				} else {
 					answer = false;
 				}
 				GameClient.sendQuestion(client, txtQuestion.getText(), answer);
-				@SuppressWarnings("unused")
-				WaitingFrame wf = new WaitingFrame(client);
+//				@SuppressWarnings("unused")
+//				WaitingFrame wf = new WaitingFrame(client);
 				dispose();
 			}
 		});
 		setVisible(true);
 	}
-	
-	public NewQuestionFrame(final Host host){
+
+	public NewQuestionFrame(final Host host) {
 		setUpFrame();
 		setUpComponents();
 		btnDone.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				boolean answer;
-				if(radioTrue.isSelected()){
+				if (radioTrue.isSelected()) {
 					answer = true;
 				} else {
 					answer = false;
 				}
 				GameHost.submitQuestion(host, txtQuestion.getText(), answer);
-				@SuppressWarnings("unused")
-				WaitingFrame wf = new WaitingFrame(host);
+//				@SuppressWarnings("unused")
+//				WaitingFrame wf = new WaitingFrame(host);
 				dispose();
 			}
 		});
@@ -93,10 +98,10 @@ public class NewQuestionFrame extends JFrame {
 		trueFalsePanel.add(radioFalse, BorderLayout.WEST);
 		add(trueFalsePanel);
 		add(btnDone);
-		
+
 		radioTrue.setSelected(true);
 		radioTrue.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				radioTrue.setSelected(true);
@@ -104,7 +109,7 @@ public class NewQuestionFrame extends JFrame {
 			}
 		});
 		radioFalse.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				radioFalse.setSelected(true);
@@ -112,17 +117,5 @@ public class NewQuestionFrame extends JFrame {
 			}
 		});
 	}
-	
+
 }
-
-
-
-
-
-
-
-
-
-
-
-

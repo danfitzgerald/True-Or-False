@@ -37,6 +37,11 @@ public class GuessFrame extends JFrame {
 	}
 	
 	public GuessFrame(final Client client, String question){
+		try{
+		client.hideWaitingFrame();
+		}catch(Exception e){
+			System.out.println("Unable to close waiting frame!");
+		}
 		setupFrame();
 		setUpComponents();
 		lbQuestion.setText(question);
