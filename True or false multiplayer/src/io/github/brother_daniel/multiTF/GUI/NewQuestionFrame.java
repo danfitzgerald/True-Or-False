@@ -42,7 +42,7 @@ public class NewQuestionFrame extends JFrame {
 		try {
 			client.hideWaitingFrame();
 		} catch (Exception e) {
-			System.out.println("Unable to close waiting frame!");
+			// System.out.println("Unable to close waiting frame!");
 		}
 		setUpFrame();
 		setUpComponents();
@@ -57,8 +57,8 @@ public class NewQuestionFrame extends JFrame {
 					answer = false;
 				}
 				GameClient.sendQuestion(client, txtQuestion.getText(), answer);
-//				@SuppressWarnings("unused")
-//				WaitingFrame wf = new WaitingFrame(client);
+				// @SuppressWarnings("unused")
+				// WaitingFrame wf = new WaitingFrame(client);
 				dispose();
 			}
 		});
@@ -79,8 +79,8 @@ public class NewQuestionFrame extends JFrame {
 					answer = false;
 				}
 				GameHost.submitQuestion(host, txtQuestion.getText(), answer);
-//				@SuppressWarnings("unused")
-//				WaitingFrame wf = new WaitingFrame(host);
+				// @SuppressWarnings("unused")
+				// WaitingFrame wf = new WaitingFrame(host);
 				dispose();
 			}
 		});

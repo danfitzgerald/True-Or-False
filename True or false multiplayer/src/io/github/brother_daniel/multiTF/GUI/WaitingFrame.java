@@ -10,23 +10,23 @@ import javax.swing.JLabel;
 public class WaitingFrame extends JFrame {
 
 	private static final long serialVersionUID = 2517542711341067860L;
-	
+
 	JLabel lbWating = new JLabel("Wating...", JLabel.CENTER);
 
 	public WaitingFrame(Client client) {
 		setUpFrame();
 		setUpComponents();
 		setVisible(true);
-		System.out.println("client opened a waiting frame");
+		// System.out.println("client opened a waiting frame");
 	}
-	
+
 	public WaitingFrame(Host host) {
 		setUpFrame();
 		setUpComponents();
 		setVisible(true);
-		System.out.println("host opened a waiting frame");
+		// System.out.println("host opened a waiting frame");
 	}
-	
+
 	private void setUpFrame() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(250, 100);
@@ -34,9 +34,9 @@ public class WaitingFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setTitle(Main.gameTitle);
 	}
-	
+
 	private void setUpComponents() {
 		add(lbWating);
 	}
-	
+
 }

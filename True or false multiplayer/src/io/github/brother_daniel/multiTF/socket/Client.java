@@ -41,7 +41,7 @@ public class Client implements Runnable {
 		// while (true) {
 
 		String tm = br.readLine();
-		System.out.println(tm);
+		// System.out.println(tm);
 		GameClient.msgReceived(tm, this);
 		// }
 	}
@@ -60,18 +60,18 @@ public class Client implements Runnable {
 			}
 		}
 	}
-	
+
 	public void showWaitingFrame() {
 		wf = new WaitingFrame(this);
 	}
-	
-	public void hideWaitingFrame(){
+
+	public void hideWaitingFrame() {
 		wf.dispose();
-		System.out.println("Client closed a waiting frame.");
+		// System.out.println("Client closed a waiting frame.");
 	}
-	
-	public boolean isWaitingFrameVisible(){
-		if(wf != null)
+
+	public boolean isWaitingFrameVisible() {
+		if (wf != null)
 			return false;
 		else
 			return true;

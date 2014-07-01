@@ -18,7 +18,7 @@ public class Host implements Runnable {
 	static PrintStream pr;
 	Thread thread = new Thread(this);
 	WaitingFrame wf;
-	
+
 	// public variables
 	public boolean answer;
 
@@ -40,7 +40,7 @@ public class Host implements Runnable {
 
 		String tm = br.readLine();
 		sendMsg(tm);
-		System.out.print(tm);
+		// System.out.print(tm);
 		GameHost.msgReceived(tm, this);
 		// }
 	}
@@ -64,18 +64,18 @@ public class Host implements Runnable {
 		pr.println(msg);
 		// System.out.println("[Chat] " + msg);
 	}
-	
+
 	public void showWaitingFrame() {
 		wf = new WaitingFrame(this);
 	}
-	
-	public void hideWaitingFrame(){
+
+	public void hideWaitingFrame() {
 		wf.dispose();
-		System.out.println("Host closed a waiting frame.");
+		// System.out.println("Host closed a waiting frame.");
 	}
-	
-	public boolean isWaitingFrameVisible(){
-		if(wf != null)
+
+	public boolean isWaitingFrameVisible() {
+		if (wf != null)
 			return false;
 		else
 			return true;
