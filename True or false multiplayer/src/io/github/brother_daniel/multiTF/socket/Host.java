@@ -10,6 +10,12 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class Host implements Runnable {
 
 	static Socket sock;

@@ -7,6 +7,12 @@ import io.github.brother_daniel.multiTF.socket.Host;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class WaitingFrame extends JFrame {
 
 	private static final long serialVersionUID = 2517542711341067860L;

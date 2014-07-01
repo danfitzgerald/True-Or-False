@@ -7,8 +7,12 @@ import io.github.brother_daniel.multiTF.socket.Host;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
 
-// TODO Work on this class!
 public class CorrectDialog extends JDialog implements Runnable {
 	private static final long serialVersionUID = 2102045214879430223L;
 

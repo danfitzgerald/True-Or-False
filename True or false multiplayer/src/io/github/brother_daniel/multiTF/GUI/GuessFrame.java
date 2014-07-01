@@ -14,6 +14,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class GuessFrame extends JFrame {
 
 	private static final long serialVersionUID = -1808887732251865876L;

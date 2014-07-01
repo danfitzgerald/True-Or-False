@@ -7,6 +7,12 @@ import io.github.brother_daniel.multiTF.socket.Host;
 
 import java.util.Random;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class GameHost {
 
 	static boolean questionAns;

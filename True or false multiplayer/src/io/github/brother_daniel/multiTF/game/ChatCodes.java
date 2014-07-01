@@ -1,5 +1,11 @@
 package io.github.brother_daniel.multiTF.game;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class ChatCodes {
 	public static String NEW_GAME = "NEW_GAME";
 	public static String JOIN_GAME = "JOIN_GAME";

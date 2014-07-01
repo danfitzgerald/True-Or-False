@@ -9,6 +9,12 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class EnterNameFrame extends JDialog {
 
 	private static final long serialVersionUID = -776527655205816591L;

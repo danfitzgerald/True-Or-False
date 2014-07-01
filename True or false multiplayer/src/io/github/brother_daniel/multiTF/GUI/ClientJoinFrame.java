@@ -13,6 +13,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class ClientJoinFrame extends JFrame {
 
 	private static final long serialVersionUID = -8437057452250832791L;

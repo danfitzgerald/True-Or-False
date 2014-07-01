@@ -5,6 +5,12 @@ import io.github.brother_daniel.multiTF.GUI.GuessFrame;
 import io.github.brother_daniel.multiTF.GUI.NewQuestionFrame;
 import io.github.brother_daniel.multiTF.socket.Client;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class GameClient {
 
 	public static void joinGame(Client client) {

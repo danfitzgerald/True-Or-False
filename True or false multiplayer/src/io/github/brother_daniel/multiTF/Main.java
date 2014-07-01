@@ -2,6 +2,12 @@ package io.github.brother_daniel.multiTF;
 
 import io.github.brother_daniel.multiTF.GUI.StartUpFrame;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class Main {
 
 	public static String gameTitle = "True & False Multiplayer";

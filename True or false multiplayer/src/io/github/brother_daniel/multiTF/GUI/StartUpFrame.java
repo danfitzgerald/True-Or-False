@@ -10,8 +10,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
- * @author Daniel(github: Brother_Daniel)
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
  */
+
 public class StartUpFrame extends JFrame {
 	// have no idea what this is but apparently I need it for something?
 	private static final long serialVersionUID = -762683396660723682L;

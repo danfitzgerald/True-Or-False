@@ -18,6 +18,12 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+/**
+ * 
+ * @author Brother_Daniel <daniel.fitzgerald@hotmail.ca>
+ *
+ */
+
 public class NewQuestionFrame extends JFrame {
 
 	private static final long serialVersionUID = 9095639910189137161L;
